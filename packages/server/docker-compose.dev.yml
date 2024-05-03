@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - 5000:5000
+    command: pnpm dev
